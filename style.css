@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Kaushan+Script&family=Oswald&display=swap");
 
-:root {
+[data-theme="light"] {
   --primary-color: rgb(255, 92, 92);
   --primary-variant: #ff2d2d;
   --secondary-color: #1b9999;
@@ -85,7 +85,6 @@ img {
   width: 300px;
 }
 
-
 /* Navigation */
 nav {
   z-index: 10px;
@@ -112,7 +111,7 @@ a:focus {
 }
 
 .title-group {
-  text-align: center ;
+  text-align: center;
 }
 
 /* Project Section */
@@ -127,7 +126,7 @@ button {
   cursor: pointer;
   border-radius: 10px;
   margin-right: 10px;
-  border: 2px solid var(--primary-color) ;
+  border: 2px solid var(--primary-color);
   font-size: 15px;
   outline: none;
 }
@@ -138,7 +137,7 @@ button:disabled {
 }
 
 button:hover:not(.outline) {
-  filter: brightness(110%)
+  filter: brightness(110%);
 }
 
 .primary {
@@ -167,6 +166,7 @@ button:hover:not(.outline) {
   width: 40%;
   text-align: justify;
   background: rgb(0 0 0 / 50%);
+  /* background: #808080; */
   color: var(--on-primary);
   border-radius: 10px;
   padding: 30px;
@@ -190,12 +190,12 @@ p {
 }
 
 .secondary {
-  border : none;
+  border: none;
 }
 
 .Alt-outline {
-   background: var(--background); 
-   border-color: #1b9999;   
+  background: var(--background);
+  border-color: #1b9999;
 }
 
 .Alt-outline:hover {
@@ -206,7 +206,7 @@ p {
 .theme-switch-wrapper {
   display: flex;
   align-items: center;
-  z-index: 100; 
+  z-index: 100;
   position: fixed;
   right: 25px;
   top: 30px;
@@ -228,13 +228,16 @@ p {
   display: inline-block;
   height: 34px;
   position: relative;
-  width: 60px;
-  background: #6c63ff; 
-  border-radius: 29px;
+  width: 69px;
+  /* background: var(--primary-color); */
+  border-radius: 19px;
 }
 
 .theme-switch input {
   display: none;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .slider {
@@ -244,12 +247,12 @@ p {
   left: 0;
   position: absolute;
   right: 0;
-  top: o;
+  top: 0;
   transition: 0.4s;
 }
 
-.slider::before {
-  background:  #fff;
+.slider:before {
+  background: #fff;
   bottom: 4px;
   content: "";
   height: 26px;
@@ -257,9 +260,9 @@ p {
   position: absolute;
   transition: 0.4s;
   width: 26px;
-} 
+}
 
-input:checked +.slider {
+input:checked + .slider {
   background: var(--primary-color);
 }
 
@@ -271,7 +274,7 @@ input:checked + .slider::before {
   border-radius: 34px;
 }
 
-.slider.round::before {
+.slider.round:before {
   border-radius: 50%;
 }
 
